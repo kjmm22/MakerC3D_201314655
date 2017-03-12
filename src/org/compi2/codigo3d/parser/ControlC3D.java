@@ -7,6 +7,7 @@ package org.compi2.codigo3d.parser;
 public class ControlC3D {
     
     private static int temp = 0;
+    private static int cont=1;
     private static String c3d = "";
     
     /**
@@ -15,6 +16,7 @@ public class ControlC3D {
      */
     public static void reiniciar(){
         temp = 0;
+        cont = 1;
         c3d = "";
     }
     
@@ -41,6 +43,11 @@ public class ControlC3D {
      */
     public static String getC3D(){
         return c3d;
+    }
+    
+    public static String generaEtiqueta()
+    {
+        return "L"+cont++;
     }
     
 }
